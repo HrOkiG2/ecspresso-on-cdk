@@ -1,0 +1,19 @@
+version: 3
+
+dotenv:
+  - .env
+  - infra/aws/.env
+
+tasks:
+  #
+  # Docker tasks
+  #
+  docker:compose:build:
+    cmds:
+      - docker compose build
+  docker:compose:up:
+    cmds:
+      - docker compose up -d
+  docker:compose:down:
+    cmds:
+      - docker compose down
